@@ -3,7 +3,6 @@ import ActorGrid from '../components/actors/ActorGrid';
 import MainPageLayout from '../components/MainPageLayout';
 import ShowGrid from '../components/shows/ShowGrid';
 import { apiGet } from '../misc/config';
-// import Title from '../components/Title';
 
 const Home = () => {
   const [input, setInput] = useState('');
@@ -19,7 +18,6 @@ const Home = () => {
     apiGet(`/search/${searchOption}?q=${input}`).then(result => {
       setResults(result);
     });
-    // fetch(`https://api.tvmaze.com/search/shows?q=${input}`)
   };
 
   const onKeyDown = ev => {
